@@ -1,8 +1,8 @@
 # 🚀 Deployment Guide - Smart Recipe Generator
 
-## Quick Deployment to Netlify (Recommended)
+## Quick Deployment to Vercel (Recommended)
 
-### Method 1: Using Netlify UI (Easiest)
+### Method 1: Using Vercel UI (Easiest)
 
 1. **Push to GitHub**
    ```bash
@@ -14,38 +14,38 @@
    git push -u origin main
    ```
 
-2. **Deploy on Netlify**
-   - Go to [https://app.netlify.com/](https://app.netlify.com/)
-   - Click "Add new site" → "Import an existing project"
-   - Connect to your GitHub repository
-   - Build settings will be auto-detected from `netlify.toml`:
+2. **Deploy on Vercel**
+   - Go to [https://vercel.com/](https://vercel.com/)
+   - Click "Add New Project"
+   - Import your GitHub repository
+   - Build settings will be auto-detected from `vercel.json`:
      - Build command: `npm run build`
-     - Publish directory: `dist`
-   - Click "Deploy site"
+     - Output directory: `dist`
+   - Click "Deploy"
 
 3. **Done!** 
-   - Your app will be live at `https://your-site-name.netlify.app`
-   - Netlify provides automatic HTTPS
+   - Your app will be live at `https://your-project.vercel.app`
+   - Vercel provides automatic HTTPS
    - Every push to main branch auto-deploys
 
-### Method 2: Using Netlify CLI
+### Method 2: Using Vercel CLI
 
 ```bash
-# Install Netlify CLI globally
-npm install -g netlify-cli
+# Install Vercel CLI globally
+npm install -g vercel
 
 # Build the project
 npm run build
 
-# Deploy to Netlify
-netlify deploy --prod
+# Deploy to Vercel
+vercel --prod
 
 # Follow the prompts to create a new site or deploy to existing
 ```
 
 ## Deploy to Vercel
 
-### Method 1: Using Vercel UI
+### Using Vercel UI (Alternative Method)
 
 1. **Push to GitHub** (same as above)
 
@@ -59,7 +59,7 @@ netlify deploy --prod
 3. **Done!**
    - Your app will be live at `https://your-project.vercel.app`
 
-### Method 2: Using Vercel CLI
+### Using Vercel CLI (Alternative Method)
 
 ```bash
 # Install Vercel CLI
@@ -71,6 +71,24 @@ vercel
 # For production
 vercel --prod
 ```
+
+## Deploy to Netlify (Alternative)
+
+### Using Netlify UI
+
+1. **Push to GitHub** (same as above)
+
+2. **Deploy on Netlify**
+   - Go to [https://app.netlify.com/](https://app.netlify.com/)
+   - Click "Add new site" → "Import an existing project"
+   - Connect to your GitHub repository
+   - Build settings:
+     - Build command: `npm run build`
+     - Publish directory: `dist`
+   - Click "Deploy site"
+
+3. **Done!**
+   - Your app will be live at `https://your-site-name.netlify.app`
 
 ## Deploy to GitHub Pages
 
@@ -153,23 +171,23 @@ This application doesn't require any environment variables for basic functionali
 
 You can add them in your hosting platform:
 
-**Netlify**: Site settings → Environment variables
-
 **Vercel**: Project settings → Environment Variables
+
+**Netlify**: Site settings → Environment variables
 
 **GitHub Pages**: Use GitHub Secrets
 
 ## Custom Domain Setup
 
-### Netlify
-1. Go to Site settings → Domain management
-2. Click "Add custom domain"
-3. Follow DNS configuration instructions
-
 ### Vercel
 1. Go to Project settings → Domains
 2. Add your custom domain
 3. Configure DNS records
+
+### Netlify
+1. Go to Site settings → Domain management
+2. Click "Add custom domain"
+3. Follow DNS configuration instructions
 
 ## Performance Optimization
 
@@ -184,8 +202,8 @@ The build process automatically:
 
 After deployment, monitor your site:
 
+- **Vercel Analytics**: Speed insights and web vitals
 - **Netlify Analytics**: Built-in analytics
-- **Vercel Analytics**: Speed insights
 - **Google Analytics**: Add tracking code in `index.html`
 
 ## Troubleshooting
@@ -196,12 +214,13 @@ After deployment, monitor your site:
 - Delete `node_modules` and reinstall: `rm -rf node_modules && npm install`
 
 ### Routes Not Working (404 errors)
-- Ensure redirects are configured (already done in `netlify.toml`)
-- For Vercel, create `vercel.json`:
-  ```json
-  {
-    "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
-  }
+- Ensure redirects are configured (already done in `vercel.json`)
+- For Netlify, create `netlify.toml`:
+  ```toml
+  [[redirects]]
+    from = "/*"
+    to = "/index.html"
+    status = 200
   ```
 
 ### Images Not Loading
@@ -224,7 +243,7 @@ After deployment, monitor your site:
 
 ## Continuous Deployment
 
-Both Netlify and Vercel support automatic deployments:
+Both Vercel and Netlify support automatic deployments:
 
 - **Main branch**: Automatically deploys to production
 - **Pull requests**: Create preview deployments
@@ -235,6 +254,6 @@ This is already configured when you connect your GitHub repository!
 ---
 
 **Need Help?**
-- Netlify Docs: https://docs.netlify.com/
 - Vercel Docs: https://vercel.com/docs
+- Netlify Docs: https://docs.netlify.com/
 - Vite Docs: https://vitejs.dev/guide/static-deploy.html

@@ -8,7 +8,7 @@ The core matching algorithm calculates recipe compatibility scores (0-100%) by a
 
 User experience is enhanced through persistent LocalStorage for favorites and ratings, enabling personalized recommendations via a weighted scoring system (40% user ratings, 30% overall ratings, 20% cuisine preference, 10% difficulty). The responsive design ensures mobile compatibility, while features like ingredient substitution suggestions, dynamic serving adjustments, and real-time nutritional recalculation provide practical cooking assistance.
 
-Error handling includes file validation, graceful degradation, and loading states. The application is deployment-ready for Netlify/Vercel with optimized production builds, code splitting, and asset optimization through Vite's build pipeline.
+Error handling includes file validation, graceful degradation, and loading states. The application is deployment-ready for Vercel with optimized production builds, code splitting, and asset optimization through Vite's build pipeline.
 
 ## Key Technical Decisions
 
@@ -207,7 +207,7 @@ This ensures highly-rated recipes matching user preferences appear first.
 
 ## Deployment
 
-**Platform**: Netlify (recommended) or Vercel
+**Platform**: Vercel (recommended)
 
 **Build Command**: `npm run build`
 

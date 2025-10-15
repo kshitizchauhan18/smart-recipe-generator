@@ -209,16 +209,22 @@ Each recipe includes:
 
 ### Recommended Platforms
 
-1. **Netlify** (Easiest)
+1. **Vercel** (Recommended)
    ```bash
-   # Connect GitHub repo or use Netlify CLI
-   netlify deploy --prod
+   # Install Vercel CLI
+   npm install -g vercel
+   
+   # Deploy
+   vercel --prod
    ```
 
-2. **Vercel**
+2. **Netlify**
    ```bash
-   # Connect GitHub repo or use Vercel CLI
-   vercel --prod
+   # Install Netlify CLI
+   npm install -g netlify-cli
+   
+   # Deploy
+   netlify deploy --prod
    ```
 
 3. **GitHub Pages**
