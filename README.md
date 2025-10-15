@@ -205,34 +205,6 @@ Each recipe includes:
 - **Color System**: CSS variables for consistent theming
 - **Performance**: Optimized rendering and minimal re-renders
 
-## Deployment
-
-### Recommended Platforms
-
-1. **Vercel** (Recommended)
-   ```bash
-   # Install Vercel CLI
-   npm install -g vercel
-   
-   # Deploy
-   vercel --prod
-   ```
-
-2. **Netlify**
-   ```bash
-   # Install Netlify CLI
-   npm install -g netlify-cli
-   
-   # Deploy
-   netlify deploy --prod
-   ```
-
-3. **GitHub Pages**
-   ```bash
-   npm run build
-   # Deploy the dist/ folder
-   ```
-
 ### Build Configuration
 
 The app uses Vite which provides:
