@@ -1,21 +1,21 @@
-# 🍳 Smart Recipe Generator
+#  Smart Recipe Generator
 
 An intelligent web application that suggests recipes based on available ingredients, with support for image-based ingredient recognition, dietary restrictions, and personalized recommendations.
 
-## 🌟 Features
+## Features
 
 ### Core Functionality
-- **📸 Image Recognition**: Upload photos of your ingredients for automatic detection
-- **🔍 Smart Recipe Matching**: Advanced algorithm matches recipes based on your ingredients
-- **💡 Ingredient Substitutions**: Get suggestions for ingredient alternatives
-- **🎯 Personalized Recommendations**: AI-powered suggestions based on your ratings and preferences
+- ** Image Recognition**: Upload photos of your ingredients for automatic detection
+- ** Smart Recipe Matching**: Advanced algorithm matches recipes based on your ingredients
+- ** Ingredient Substitutions**: Get suggestions for ingredient alternatives
+- ** Personalized Recommendations**: AI-powered suggestions based on your ratings and preferences
 
 ### User Features
-- **❤️ Favorites System**: Save your favorite recipes for quick access
-- **⭐ Rating System**: Rate recipes to improve recommendations
-- **🍽️ Serving Adjustments**: Dynamically adjust recipe servings and nutrition info
-- **📊 Nutritional Information**: Complete nutritional breakdown for each recipe
-- **🏷️ Dietary Filters**: Filter by vegetarian, vegan, gluten-free, and keto options
+- ** Favorites System**: Save your favorite recipes for quick access
+- ** Rating System**: Rate recipes to improve recommendations
+- ** Serving Adjustments**: Dynamically adjust recipe servings and nutrition info
+- ** Nutritional Information**: Complete nutritional breakdown for each recipe
+- ** Dietary Filters**: Filter by vegetarian, vegan, gluten-free, and keto options
 
 ### Filters & Customization
 - Filter by difficulty level (Easy, Medium, Hard)
@@ -25,7 +25,7 @@ An intelligent web application that suggests recipes based on available ingredie
 - Filter by multiple dietary restrictions
 - Save dietary preferences for automatic filtering
 
-## 🚀 Tech Stack
+## Tech Stack
 
 - **Frontend**: Vanilla JavaScript (ES6+)
 - **Build Tool**: Vite
@@ -33,7 +33,7 @@ An intelligent web application that suggests recipes based on available ingredie
 - **Data Storage**: LocalStorage for user preferences and favorites
 - **Image Processing**: Custom image recognition simulation (FileReader API)
 
-## 📋 Project Structure
+## Project Structure
 
 ```
 smart-recipe-generator/
@@ -54,7 +54,7 @@ smart-recipe-generator/
 └── README.md                    # This file
 ```
 
-## 🔧 Installation & Setup
+## Installation & Setup
 
 1. **Clone the repository**
    ```bash
@@ -82,7 +82,7 @@ smart-recipe-generator/
    npm run preview
    ```
 
-## 💻 Usage
+## Usage
 
 ### Finding Recipes
 
@@ -129,7 +129,7 @@ smart-recipe-generator/
 - Select preferred difficulty level
 - Preferences are automatically applied to searches
 
-## 🧠 Technical Approach
+## Technical Approach
 
 ### Ingredient Recognition
 
@@ -177,7 +177,7 @@ Recommendations use a weighted scoring system:
 - Data survives page refreshes
 - No backend required
 
-## 📊 Recipe Database
+## Recipe Database
 
 The application includes **22 diverse recipes** covering:
 
@@ -196,7 +196,7 @@ Each recipe includes:
 - Cooking time
 - Servings
 
-## 🎨 UI/UX Considerations
+## UI/UX Considerations
 
 - **Mobile-First Design**: Fully responsive on all devices
 - **Intuitive Navigation**: Tab-based interface for easy switching
@@ -205,7 +205,7 @@ Each recipe includes:
 - **Color System**: CSS variables for consistent theming
 - **Performance**: Optimized rendering and minimal re-renders
 
-## 🚀 Deployment
+## Deployment
 
 ### Recommended Platforms
 
@@ -236,7 +236,7 @@ The app uses Vite which provides:
 - Asset optimization
 - Modern ES6+ support
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - Real ML-based image recognition
 - User accounts with cloud sync
@@ -248,18 +248,17 @@ The app uses Vite which provides:
 - Video cooking tutorials
 - Print recipe formatting
 
-## 📝 License
+## License
 
 MIT License - feel free to use this project for learning or commercial purposes.
 
-## 👨‍💻 Author
+## Author
 
 Created as a demonstration of modern web development practices with vanilla JavaScript.
 
 ---
 
-**Live Demo**: [Deploy your own!]
+**Live Demo**: https://smart-recipe-generator-livid.vercel.app/
 
-**GitHub**: [Your Repository URL]
+**GitHub**: https://github.com/kshitizchauhan18/smart-recipe-generator
 
-Built with ❤️ and 🍕
